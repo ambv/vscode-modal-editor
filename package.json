@@ -48,6 +48,10 @@
         "title": "Modal Editor: Set mode to command"
       },
       {
+        "command": "modalEditor.setSelectionSearchMode",
+        "title": "Modal Editor: Set mode to search within a selection"
+      },
+      {
         "command": "modalEditor.importKeybindings",
         "title": "Modal Editor: Import keybindings"
       },
@@ -176,6 +180,24 @@
         "command": "modalEditor.setKeys",
         "args": "_ctx.keys.substring(0, _ctx.keys.length-1)",
         "when": "editorTextFocus && modalEditor.mode == 'command'"
+      },
+      {
+        "key": "backspace",
+        "command": "type",
+        "args": { "text": "\b" },
+        "when": "editorTextFocus && modalEditor.mode == 'selectionSearch'"
+      },
+      {
+        "key": "escape",
+        "command": "type",
+        "args": { "text": "\u001b" },
+        "when": "editorTextFocus && modalEditor.mode == 'selectionSearch'"
+      },
+      {
+        "key": "enter",
+        "command": "type",
+        "args": { "text": "\n" },
+        "when": "editorTextFocus && modalEditor.mode == 'selectionSearch'"
       }
     ],
     "configuration": {
