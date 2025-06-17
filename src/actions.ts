@@ -427,6 +427,7 @@ export class AppState {
 		// Update editor selections
 		if (newSelections.length > 0) {
 			editor.selections = newSelections;
+			editor.revealRange(newSelections[0], vscode.TextEditorRevealType.InCenterIfOutsideViewport);
 			this.updateSearchStatus(undefined, newSelections.length);
 		} else {
 			// No matches found - restore original selections
