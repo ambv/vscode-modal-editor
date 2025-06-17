@@ -322,7 +322,14 @@ module.exports = {
 		v: "modalEditor.setSelectMode",
 
 		// enter selection search mode
-		s: "modalEditor.setSelectionSearchMode"
+		s: "modalEditor.setSelectionSearchMode",
+
+		// navigate between selections
+		"(": "modalEditor.navigateToPreviousSelection",
+		")": "modalEditor.navigateToNextSelection",
+
+		// unselect primary selection (Alt+, platform dependent)
+		"≤": "modalEditor.unselectPrimarySelection"
 	},
 
 	select: {
@@ -404,7 +411,14 @@ module.exports = {
 		v: "modalEditor.setNormalMode",
 
 		// enter selection search mode
-		s: "modalEditor.setSelectionSearchMode"
+		s: "modalEditor.setSelectionSearchMode",
+
+		// navigate between selections
+		"(": "modalEditor.navigateToPreviousSelection",
+		")": "modalEditor.navigateToNextSelection",
+
+		// unselect primary selection (Alt+, platform dependent)
+		"≤": "modalEditor.unselectPrimarySelection"
 	},
 
 	// Command mode

@@ -202,6 +202,18 @@ export async function setSelectionSearchMode() {
 	await setMode(SELECTION_SEARCH);
 }
 
+export function navigateToNextSelection() {
+	appState.navigateToNextSelection();
+}
+
+export function navigateToPreviousSelection() {
+	appState.navigateToPreviousSelection();
+}
+
+export function unselectPrimarySelection() {
+	appState.unselectPrimarySelection();
+}
+
 /**
  * Change the current key sequence but not applying them
  * Arg is a js expression
@@ -677,6 +689,9 @@ export async function register(context: vscode.ExtensionContext, outputChannel: 
 		registerCommand(setSelectMode),
 		registerCommand(setCommandMode),
 		registerCommand(setSelectionSearchMode),
+		registerCommand(navigateToNextSelection),
+		registerCommand(navigateToPreviousSelection),
+		registerCommand(unselectPrimarySelection),
 		registerCommand(setKeys),
 		registerCommand(gotoLine),
 		registerCommand(findText),

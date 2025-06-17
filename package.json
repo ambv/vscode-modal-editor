@@ -52,6 +52,18 @@
         "title": "Modal Editor: Set mode to search within a selection"
       },
       {
+        "command": "modalEditor.navigateToNextSelection",
+        "title": "Modal Editor: Navigate to next selection"
+      },
+      {
+        "command": "modalEditor.navigateToPreviousSelection",
+        "title": "Modal Editor: Navigate to previous selection"
+      },
+      {
+        "command": "modalEditor.unselectPrimarySelection",
+        "title": "Modal Editor: Unselect primary selection"
+      },
+      {
         "command": "modalEditor.importKeybindings",
         "title": "Modal Editor: Import keybindings"
       },
@@ -198,6 +210,11 @@
         "command": "type",
         "args": { "text": "\n" },
         "when": "editorTextFocus && modalEditor.mode == 'selectionSearch'"
+      },
+      {
+        "key": "alt+,",
+        "command": "modalEditor.unselectPrimarySelection",
+        "when": "editorTextFocus && (modalEditor.mode == 'normal' || modalEditor.mode == 'select')"
       }
     ],
     "configuration": {
