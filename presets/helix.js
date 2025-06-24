@@ -32,7 +32,7 @@ const recordChange = command => record(command, "change");
 const recordMotion = command => record(command, "motion");
 
 module.exports = {
-	// Common keybindings (except for insert mode)
+	// Common keybindings (except for insert and selectionSearch modes)
 	"": {
 		u: repeatable("undo"),
 		U: repeatable("redo"),
@@ -310,7 +310,17 @@ module.exports = {
 		},
 
 		// set to select mode
-		v: "modalEditor.setSelectMode"
+		v: "modalEditor.setSelectMode",
+
+		// enter selection search mode
+		s: "modalEditor.setSelectionSearchMode",
+
+		// navigate between selections
+		"(": "modalEditor.navigateToPreviousSelection",
+		")": "modalEditor.navigateToNextSelection",
+
+		// unselect primary selection (Alt+, platform dependent)
+		"≤": "modalEditor.unselectPrimarySelection"
 	},
 
 	select: {
@@ -389,7 +399,17 @@ module.exports = {
 		},
 
 		// set back to normal mode
-		v: "modalEditor.setNormalMode"
+		v: "modalEditor.setNormalMode",
+
+		// enter selection search mode
+		s: "modalEditor.setSelectionSearchMode",
+
+		// navigate between selections
+		"(": "modalEditor.navigateToPreviousSelection",
+		")": "modalEditor.navigateToNextSelection",
+
+		// unselect primary selection (Alt+, platform dependent)
+		"≤": "modalEditor.unselectPrimarySelection"
 	},
 
 	// Command mode
