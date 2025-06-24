@@ -212,6 +212,12 @@
         "when": "editorTextFocus && modalEditor.mode == 'selectionSearch'"
       },
       {
+        "key": "delete",
+        "command": "type",
+        "args": { "text": "\u007f" },
+        "when": "editorTextFocus && modalEditor.mode == 'selectionSearch'"
+      },
+      {
         "key": "alt+,",
         "command": "modalEditor.unselectPrimarySelection",
         "when": "editorTextFocus && (modalEditor.mode == 'normal' || modalEditor.mode == 'select')"
