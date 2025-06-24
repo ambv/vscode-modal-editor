@@ -116,6 +116,8 @@ They are listed as follows:
 | `modalEditor.importKeybindings` | - | Import keybindings |
 | `modalEditor.importPreset` | `string?` | Import keybindings from preset dir or a specified dir |
 | `modalEditor.jumpToBracket` | - | Jump to matching bracket (Helix-style: uses cursor position in selection mode) |
+| `modalEditor.selectLine` | - | Select current line (allows expanding with repeated use; properly handles empty lines) |
+| `modalEditor.selectToEndOfLine` | - | Select to end of line (first press: to last char, second press: to actual line end) |
 
 
 Types defined in the above table:
