@@ -400,7 +400,7 @@ export class AppState {
 
 		let regex: RegExp;
 		try {
-			regex = new RegExp(this.selectionSearchPattern, 'g');
+			regex = new RegExp(this.selectionSearchPattern, 'gm');
 		} catch (error) {
 			if (this.originalSelections) {
 				editor.selections = Array.from(this.originalSelections);
